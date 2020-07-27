@@ -1,0 +1,10 @@
+#Root Folder 연결
+	git init git remote add origin 'repository address'
+	git pull origin master
+	git status #상태 / 현재 트래킹 되어있는지, 아닌지
+	git add . #로컬pc -> 깃 / 모든 파일을 다 트래킹
+	git commit -m "이름"
+	git push origin master
+	로그인 창 - 로그인
+	
+	
