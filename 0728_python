@@ -1,0 +1,129 @@
+# 메서드 : print, input, type 등 
+
+def createmessage(name,email) :
+    msg = '{0} ({1})님 환영합니다'.format(name,email)
+    return msg
+
+message = createmessage('수빈','subaengi@gmail.com')
+
+print(message)
+
+#리스트
+nations = list()
+nations.append('한국')
+nations.append('미국')
+nations.append('중국')
+
+#반복문
+for n in nations :
+    print(n)
+
+# 종합
+command = ''
+while command.upper() != "EXIT" : #exit가 아닐때는 평생 돌아라, upper는 대문자
+    command = input('명령어를 입력하세요.')
+
+    print('입력된 명령어 : {0}'.format(command))
+
+print('종료되었습니다.')
+
+
+# 과일 또는 채소를 입력받아, list에 추가하는 프로그램.
+
+fruits = list()
+vegetables = list()
+command = ''
+
+while command != "exit" :
+    command = input("과일 혹은 채소라고 입력하세요  ")
+
+    if command == "과일":
+        fruit = input("과일을 입력하세요  ")
+        fruits.append(fruit)
+
+    elif command == "과일출력" :
+        for f in fruits :
+            print(f)
+    
+    elif command == "채소":
+        vegetable = input("채소를 입력하세요  ")
+        vegetables.append(vegetable)
+
+    elif command == "채소출력" :
+        for v in vegetables :
+            print(v)
+
+    else :
+        print('명령어를 다시 입력해주세요.  ')
+        
+        
+# 프로그램 간단하게 (vba)
+
+fruits = list()
+vegetables = list()
+command = ''
+
+def AddItem(items, message) :
+    item = input(message)
+    items.append(item)
+
+def PrintItem(x) :
+    for y in x :
+        print(y)
+
+while command != "exit" :
+    command = input("과일 혹은 채소라고 입력하세요  ")
+
+    if command == "과일":
+        AddItem(fruits, '과일을 입력해주세요.')
+
+    elif command == "과일출력" :
+        PrintItem(fruits)
+    
+    elif command == "채소":
+        AddItem(vegetables, '채소를 입력해주세요.')
+
+    elif command == "채소출력" :
+        PrintItem(vegetables)
+
+    else :
+        print('명령어를 다시 입력해주세요.  ')
+print("종료되었습니다.")
+
+
+# 클래스 만들기 -> model_class
+class Disney :
+    def __init__(self,name,nation,age):  #init : 생성자
+        self.name = name
+        self.nation = nation
+        self.age = age
+        self.isdisney = True #default 값이기 때문에, 입력해주지 않아도 기본 값으로 나옴
+        
+    def ShowProfile(self) :
+        print('{0},{1},{2}',format(self.nation,self.name,self.age))
+
+    def upper(self):
+        return self.name.upper() #대문자로 바꾸기 upper()
+
+    def lower(self) :
+        return self.name.lower() #소문자로 바꾸기 lower()
+        
+        
+# 클래스 만들기 -> main.py
+from model_class import Disney
+
+D = list()
+
+D.append(Disney('백설공주','미국',23))
+D.append(Disney('알라딘','중동',20))
+D.append(Disney('인어공주','미국',19))
+D.append(Disney('슬픔이','미국',5))
+D.append(Disney('기쁨이','미국,',4))
+D.append(Disney('라푼젤','미국',3))
+
+for i in D :
+    print(i.name,i.nation,i.age,i.isdisney)
+
+for i in D :
+    name = i.lower() #대문자는 upper
+    print(name)
