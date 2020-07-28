@@ -1,0 +1,63 @@
+num1 = input('첫번째숫자')
+num2 = input('두번째숫자')
+​
+print(int(num1)+int(num2))
+첫번째숫자16
+두번째숫자3253
+3269
+str_age = input('나이를 입력하세요')
+age=int(str_age)
+​
+if age >= 18 :
+    print('ok')
+elif age >15 :
+    print('허가필요')
+else :
+    print('no')
+​
+나이를 입력하세요17
+허가필요
+print('실행 :')
+x = input('x값을 입력해주세요')
+y = input('y값을 입력해주세요')
+​
+print('결과 :')
+print(int(x)+int(y))
+실행 :
+x값을 입력해주세요20
+y값을 입력해주세요30
+결과 :
+50
+age = input('나이는?')
+result = age > 18
+​
+if result == True :
+    print('18 이상입니다')
+else :
+    print('18 미만입니다')
+나이는?18
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-16-c49758340bac> in <module>
+      1 age = input('나이는?')
+----> 2 result = age > 18
+      3 
+      4 if result == True :
+      5     print('18 이상입니다')
+
+TypeError: '>' not supported between instances of 'str' and 'int'
+
+add = input('주소를 입력해주세요')
+if len(add)> 20 :
+    print('너무 길어 다시 입력')
+    add = input('주소를 다시 입력해주세요')
+else :
+    print('주소는'+add+'입니다.')
+주소를 입력해주세요서울시 중랑구 상봉동
+주소는서울시 중랑구 상봉동입니다.
+print(add.replace('중랑구','동대문구'))
+서울시 동대문구 상봉동
+message = '{0}({1})님 환영합니다.'.format('수빈','만 23세')
+print(message)
+#문자랑 숫자랑 병합하거나 할 때는, 조합이 안되니까 format 사용하면 됨. 다만 형식이 유지되는 것은 아니고, str로 변하긴 함
+수빈(만 23세)님 환영합니다.
